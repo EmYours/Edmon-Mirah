@@ -52,23 +52,34 @@
         
         /* Header */
         header {
-            background: linear-gradient(rgba(255, 250, 245, 0.8), rgba(255, 250, 245, 0.8)), 
-                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f5f0eb"/></svg>');
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('HeaderImage.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             text-align: center;
             padding: 60px 0 40px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+        
+        .header-logo {
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 20px;
+        display: block;
         }
         
         .couple-names {
             font-size: 3.5rem;
             margin-bottom: 10px;
-            color: #8b6b4c;
+            color: white;
             font-family: 'Playfair Display', serif;
         }
         
         .wedding-date {
             font-size: 1.5rem;
-            color: #a88c70;
             margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
         }
         
         /* Hero Section */
@@ -157,15 +168,40 @@
             gap: 10px;
         }
         
-        .map-placeholder {
+        .map-image {
+            width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #e8d9c8, #d4bda1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            object-fit: cover;
             margin-top: 20px;
             border-radius: 3px;
-            color: #8b6b4c;
+            display: block;
+        }
+        
+        .location-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .location-btn {
+            background-color: #8b6b4c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .location-btn:hover {
+            background-color: #7a5a3c;
         }
         
         /* Wedding Party */
@@ -401,23 +437,74 @@
         /* Guest Attire */
         .guest-attire {
             background-color: #fefaf7;
-            text-align: center;
         }
         
-        .attire-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .attire-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .attire-image-section {
+            flex: 1;
+            min-width: 300px;
             background-color: #fff;
-            padding: 40px;
+            padding: 30px;
             border-radius: 5px;
             box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+        
+        .attire-image-section h3 {
+            color: #8b6b4c;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e8d9c8;
+            padding-bottom: 10px;
+        }
+        
+        .attire-image-placeholder {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .attire-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .attire-details {
+            flex: 1;
+            min-width: 300px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+        
+        .attire-details h3 {
+            color: #8b6b4c;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e8d9c8;
+            padding-bottom: 10px;
         }
         
         .color-swatches {
             display: flex;
             gap: 15px;
-            justify-content: center;
             margin-top: 20px;
+            justify-content: center;
             flex-wrap: wrap;
         }
         
@@ -427,9 +514,10 @@
             border-radius: 50%;
         }
         
-        .mocha { background-color: #8b6b4c; }
-        .beige { background-color: #d4bda1; }
-        .cream { background-color: #f8f3ee; }
+        .color1 { background-color: #cfb4b5; }
+        .color2 { background-color: #8e7976; }
+        .color3 { background-color: #ece2cf; }
+        .color4 { background-color: #736764; }
         
         /* Modal Styles */
         .modal {
@@ -488,11 +576,15 @@
                 font-size: 2.5rem;
             }
             
+            .header-logo {
+                max-width: 200px;
+            }
+            
             .timer-unit {
                 min-width: 100px;
             }
             
-            .detail-card, .party-category {
+            .detail-card, .party-category, .attire-image-section, .attire-details {
                 min-width: 100%;
             }
             
@@ -504,6 +596,30 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .location-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .location-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-logo {
+                max-width: 150px;
+            }
+            
+            .couple-names {
+                font-size: 2rem;
+            }
+            
+            .wedding-date {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -511,9 +627,8 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <h1 class="couple-names">Edmon & Mirah</h1>
-            <p class="wedding-date">04 November 2025 • 3 o'clock in the afternoon</p>
-            <p>Palapala United Methodist Church, Sampaloc 1, Dasmariñas City, Cavite</p>
+            <img src="Logo.png" alt="Edmon & Mirah Wedding" class="header-logo">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
     </header>
     
@@ -562,8 +677,14 @@
                     <p>Sampaloc 1, Dasmariñas City, Cavite</p>
                     <p>04 November 2025</p>
                     <p>3 o'clock in the afternoon</p>
-                    <div class="map-placeholder">
-                        Church Location Map
+                    <img src="Palapala.jpg" alt="Palapala United Methodist Church" class="map-image">
+                    <div class="location-buttons">
+                        <a href="https://maps.app.goo.gl/kpQdBSGPUNGoJtRw8" target="_blank" class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i> Google Maps
+                        </a>
+                        <a href="https://ul.waze.com/ul?place=ChIJP5y__JDVlzMRI9eKFdHCJq4&ll=14.29698060%2C120.95576420&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" class="location-btn">
+                            <i class="fas fa-car"></i> Waze
+                        </a>
                     </div>
                 </div>
                 
@@ -572,8 +693,14 @@
                     <p><strong>Mango Grove Events Place</strong></p>
                     <p>Paliparan, Dasmariñas City, Cavite</p>
                     <p>Immediately following the ceremony</p>
-                    <div class="map-placeholder">
-                        Reception Location Map
+                    <img src="Mango.jpg" alt="Mango Grove Events Place" class="map-image">
+                    <div class="location-buttons">
+                        <a href="https://maps.app.goo.gl/ao9gC6QTtoYosoa88" target="_blank" class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i> Google Maps
+                        </a>
+                        <a href="https://ul.waze.com/ul?place=ChIJW5m7Q97VlzMRgUa7lgOf96Q&ll=14.30185000%2C120.98357230&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" class="location-btn">
+                            <i class="fas fa-car"></i> Waze
+                        </a>
                     </div>
                 </div>
             </div>
@@ -635,6 +762,38 @@
                         <li><strong>To carry our symbol of Treasure:</strong> JIRO REINT F. BISANDE</li>
                         <li><strong>To shower our aisle with flowers:</strong> REYN BASA & AYAKA MARI IRINCO</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Guest Attire -->
+    <section class="guest-attire">
+        <div class="container">
+            <h2 class="section-title">Guest Attire</h2>
+            <div class="attire-container">
+                <div class="attire-image-section">
+                    <h3>Principal Sponsor Attire</h3>
+                    <div class="attire-image-placeholder">
+                        <img src="PrincipalAttire.png" alt="Principal Sponsor Attire">
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <p><strong>For Women:</strong> Mocha Mousse Color Dresses</p>
+                        <p><strong>For Men:</strong> Barong and Slacks</p>
+                    </div>
+                </div>
+                
+                <div class="attire-details">
+                    <h3>Guest Attire</h3>
+                    <p><strong>PLEASE WEAR SEMI-FORMAL ATTIRE</strong></p>
+                    <p>We encourage you to dress according to our motif shades</p>
+                    
+                    <div class="color-swatches">
+                        <div class="color-swatch color1" title="#cfb4b5"></div>
+                        <div class="color-swatch color2" title="#8e7976"></div>
+                        <div class="color-swatch color3" title="#ece2cf"></div>
+                        <div class="color-swatch color4" title="#736764"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -740,28 +899,6 @@
                         <i class="fas fa-qrcode fa-2x" style="color: #8b6b4c; margin-bottom: 10px;"></i>
                         <p>Scan Code</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Guest Attire -->
-    <section class="guest-attire">
-        <div class="container">
-            <h2 class="section-title">Guest Attire</h2>
-            <div class="attire-content">
-                <p>PLEASE WEAR <strong>SEMI-FORMAL</strong> ATTIRE</p>
-                <p>We encourage you to dress according to our motif shades</p>
-                
-                <div class="color-swatches">
-                    <div class="color-swatch mocha" title="Mocha Mousse"></div>
-                    <div class="color-swatch beige" title="Beige"></div>
-                    <div class="color-swatch cream" title="Cream"></div>
-                </div>
-                
-                <div style="margin-top: 30px;">
-                    <p><strong>For Women:</strong> Mocha Mousse Color Dresses</p>
-                    <p><strong>For Men:</strong> Barong and Slacks</p>
                 </div>
             </div>
         </div>
@@ -879,12 +1016,12 @@
                     break;
                 case 'gcash':
                     modalTitle.textContent = 'GCash Transfer';
-                    modalImage.src = 'https://via.placeholder.com/400x300/8b6b4c/ffffff?text=GCash+QR+Code';
+                    modalImage.src = 'QrGcash.jpg';
                     modalDescription.textContent = 'Scan this QR code or send to GCash number: 09764679997';
                     break;
                 case 'scan':
                     modalTitle.textContent = 'Scan Payment Code';
-                    modalImage.src = 'https://via.placeholder.com/400x300/8b6b4c/ffffff?text=Payment+QR+Code';
+                    modalImage.src = 'QrBPI.jpg';
                     modalDescription.textContent = 'Scan this QR code with your banking app to send your gift.';
                     break;
             }
