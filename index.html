@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edmon & Mirah Wedding</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Added elegant cursive fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Parisienne&display=swap" rel="stylesheet">
     <style>
         /* Base Styles */
         * {
@@ -35,10 +37,15 @@
             letter-spacing: 1px;
         }
         
+        /* Updated section titles with elegant cursive fonts */
         .section-title {
             text-align: center;
             margin-bottom: 50px;
             position: relative;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: #8b6b4c;
         }
         
         .section-title:after {
@@ -50,75 +57,59 @@
             margin: 15px auto;
         }
         
+        /* Updated specific section titles with different elegant fonts */
+        .wedding-details-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.2rem;
+        }
+        
+        .wedding-party-title {
+            font-family: 'Parisienne', cursive;
+            font-size: 3.2rem;
+        }
+        
+        .attire-guide-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+        }
+        
+        .rsvp-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.8rem;
+        }
+        
+        .gift-guide-title {
+            font-family: 'Parisienne', cursive;
+            font-size: 3.2rem;
+        }
+        
         /* Header */
-header {
-    background: none;
-    text-align: center;
-    padding: 60px 0 40px;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-    position: relative;
-    overflow: hidden;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('header.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 60px 0 40px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-.header-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    z-index: 1;
-}
-
-.header-bg-image {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.header-left-bg {
-    object-position: right center;
-}
-
-.header-right-bg {
-    object-position: left center;
-}
-
-.header-logo {
-    max-width: 400px;
-    height: auto;
-    display: block;
-    position: relative;
-    z-index: 2;
-    margin-bottom: 30px;
-}
-
-.header-content {
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 0 20px;
-}
-
-.couple-names {
-    font-size: 4rem;
-    margin-bottom: 15px;
-    color: white;
-    font-family: 'Playfair Display', serif;
-}
-
-.wedding-date {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.9);
-}
+        .header-logo {
+            max-width: 400px;
+            height: auto;
+            display: block;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 30px;
+        }
         
         /* Hero Section */
         .hero {
@@ -204,6 +195,7 @@ header {
             display: flex;
             align-items: center;
             gap: 10px;
+            font-family: 'Playfair Display', serif;
         }
         
         .map-image {
@@ -252,6 +244,7 @@ header {
             flex-wrap: wrap;
             gap: 30px;
             justify-content: center;
+            position: relative;
         }
         
         .party-category {
@@ -269,23 +262,72 @@ header {
             text-align: center;
             border-bottom: 1px solid #e8d9c8;
             padding-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 2px;
         }
         
         .party-list {
             list-style: none;
         }
         
-        .party-list li {
-            padding: 8px 0;
+        .principal-sponsor-pair {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
             border-bottom: 1px dashed #e8d9c8;
+            text-align: center;
+        }
+        
+        .principal-sponsor-pair:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .sponsor-name {
+            display: block;
+            margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #5a4a42;
+            line-height: 1.6;
+        }
+        
+        .secondary-sponsor-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #e8d9c8;
+            text-align: center;
+        }
+        
+        .secondary-sponsor-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .role-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #8b6b4c;
+            margin-bottom: 8px;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+        
+        .sponsor-name-individual {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: #5a4a42;
+            line-height: 1.6;
         }
         
         .couple-lastnames {
             text-align: center;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: #8b6b4c;
             margin-bottom: 30px;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Great Vibes', cursive;
+            letter-spacing: 3px;
         }
         
         .officiating-minister {
@@ -294,6 +336,18 @@ header {
             padding: 20px;
             background: #fefaf7;
             border-radius: 5px;
+        }
+        
+        .officiating-minister h3 {
+            font-family: 'Playfair Display', serif;
+            color: #8b6b4c;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .officiating-minister p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
         }
         
         .parents-section {
@@ -315,6 +369,44 @@ header {
             margin-bottom: 15px;
             border-bottom: 1px solid #e8d9c8;
             padding-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+        }
+        
+        .parents-group p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        /* New styles for Best Man and Maid of Honor */
+        .honor-attendants {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .honor-attendant {
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .honor-attendant h4 {
+            color: #8b6b4c;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e8d9c8;
+            padding-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+        }
+        
+        .honor-attendant p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
         }
         
         /* RSVP Form */
@@ -342,6 +434,7 @@ header {
             margin-bottom: 8px;
             color: #8b6b4c;
             font-weight: 500;
+            font-family: 'Playfair Display', serif;
         }
         
         input, select, textarea {
@@ -500,6 +593,7 @@ header {
             text-align: center;
             border-bottom: 1px solid #e8d9c8;
             padding-bottom: 10px;
+            font-family: 'Playfair Display', serif;
         }
         
         .attire-image-placeholder {
@@ -536,6 +630,7 @@ header {
             text-align: center;
             border-bottom: 1px solid #e8d9c8;
             padding-bottom: 10px;
+            font-family: 'Playfair Display', serif;
         }
         
         .color-swatches {
@@ -596,84 +691,83 @@ header {
             color: #8b6b4c;
         }
         
-        
-        
-        /* Responsive adjustments */
-@media (max-width: 768px) {
-    header {
-        min-height: 500px;
-        padding: 40px 0 30px;
-    }
-    
-    .header-bg {
-        flex-direction: column;
-    }
-    
-    .header-bg-image {
-        width: 100%;
-        height: 50%;
-    }
-    
-    .header-left-bg {
-        object-position: center bottom;
-    }
-    
-    .header-right-bg {
-        object-position: center top;
-    }
-    
-    .header-logo {
-        max-width: 350px;
-        margin-bottom: 20px;
-    }
-    
-    .couple-names {
-        font-size: 2.8rem;
-    }
-    
-    .wedding-date {
-        font-size: 1.4rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        min-height: 550px;
-        padding: 30px 0 20px;
-    }
-    
-    .header-logo {
-        max-width: 250px;
-        margin-bottom: 15px;
-    }
-    
-    .couple-names {
-        font-size: 2.2rem;
-    }
-    
-    .wedding-date {
-        font-size: 1.2rem;
-    }
-}
-/* Footer */
+        /* Footer */
         footer {
             background-color: #8b6b4c;
             color: #f8f3ee;
             text-align: center;
             padding: 30px 0;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                min-height: 600px;
+                padding: 40px 0 30px;
+            }
+            
+            .header-logo {
+                max-width: 350px;
+                margin-bottom: 20px;
+            }
+            
+            /* Adjust font sizes for mobile */
+            .section-title {
+                font-size: 2.8rem;
+            }
+            
+            .wedding-details-title,
+            .wedding-party-title,
+            .gift-guide-title {
+                font-size: 2.5rem;
+            }
+            
+            .attire-guide-title {
+                font-size: 2.8rem;
+            }
+            
+            .rsvp-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                min-height: 700px;
+                padding: 30px 0 20px;
+            }
+            
+            .header-logo {
+                max-width: 250px;
+                margin-bottom: 15px;
+            }
+            
+            /* Further adjust font sizes for small screens */
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .wedding-details-title,
+            .wedding-party-title,
+            .gift-guide-title {
+                font-size: 2rem;
+            }
+            
+            .attire-guide-title {
+                font-size: 2.2rem;
+            }
+            
+            .rsvp-title {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-<header>
-    <div class="header-bg">
-        <img src="HeaderLeft.jpg" alt="Left Header" class="header-bg-image header-left-bg">
-        <img src="HeaderRight.jpg" alt="Right Header" class="header-bg-image header-right-bg">
-    </div>
-    <img src="Logo.png" alt="Edmon & Mirah Wedding" class="header-logo">
-    
-</header>
+    <header>
+    </header>
     
     <!-- Hero Section -->
     <section class="hero">
@@ -712,7 +806,7 @@ header {
     <!-- Event Details -->
     <section class="event-details">
         <div class="container">
-            <h2 class="section-title">Wedding Details</h2>
+            <h2 class="section-title wedding-details-title">Wedding Details</h2>
             <div class="details-container">
                 <div class="detail-card">
                     <h3><i class="fas fa-church"></i> Ceremony</h3>
@@ -752,69 +846,137 @@ header {
     </section>
     
     <!-- Wedding Party -->
-    <section class="wedding-party">
-        <div class="container">
-            <h2 class="section-title">Wedding Party</h2>
-            
-            <div class="couple-lastnames">BASA - SANTOS</div>
-            
-            <div class="officiating-minister">
-                <h3>Officiating Minister</h3>
-                <p>REV. EMMANUEL B. JUAN</p>
+<section class="wedding-party">
+    <div class="container">
+        <h2 class="section-title wedding-party-title">Wedding Party</h2>
+        
+        <div class="couple-lastnames">BASA - SANTOS</div>
+        
+        <div class="officiating-minister">
+            <h3>Officiating Minister</h3>
+            <p>REV. EMMANUEL B. JUAN</p>
+        </div>
+        
+        <div class="parents-section">
+            <div class="parents-group">
+                <h4>Parents of the Groom</h4>
+                <p>MR. ARNOLD BASA</p>
+                <p>MRS. MARIA LITA M. BASA</p>
             </div>
             
-            <div class="parents-section">
-                <div class="parents-group">
-                    <h4>Parents of the Groom</h4>
-                    <p>MR. ARNOLD BASA</p>
-                    <p>MRS. MARIA LITA M. BASA</p>
-                </div>
-                
-                <div class="parents-group">
-                    <h4>Parents of the Bride</h4>
-                    <p>MR. ARNOLD P. SANTOS</p>
-                    <p>MRS. NOVA S. RADICS</p>
-                </div>
+            <div class="parents-group">
+                <h4>Parents of the Bride</h4>
+                <p>MR. ARNOLD P. SANTOS</p>
+                <p>MRS. NOVA S. RADICS</p>
             </div>
-            
-            <div class="party-container">
-                <div class="party-category">
-                    <h3>Principal Sponsors</h3>
-                    <p style="text-align: center; margin-bottom: 15px; font-style: italic;">To stand as witnesses on our vows</p>
-                    <ul class="party-list">
-                        <li>REV. MARLON B. DIAZ & DSS. ELIZABETH C. DIAZ</li>
-                        <li>MR. LOUIE GONZALES & MRS. JULIE GONZALES</li>
-                        <li>MR. FLORO C. LAGARTO & MRS. AILEEN A. LAGARTO</li>
-                        <li>MR. FREDERICK CASTILLO & MS. ANGELINA JUTIE</li>
-                        <li>MR. JEFFREY ENCARNADO & DR. CHERRIE LYN L. CASCO</li>
-                        <li>MR. NANIE CARUNGCONG & MRS. MARCI BOLLES</li>
-                        <li>MR. FREDERICK DINGLASAN & MRS. MYRLANIE DINGLASAN</li>
-                        <li>MRS. MELANIE LARUE</li>
-                        <li>MS. LAARNI DE LEON REYES</li>
-                    </ul>
+        </div>
+        <!-- Best Man and Maid of Honor section - MOVED OUTSIDE party-container -->
+        <div style="text-align: center; margin: 40px 0;">
+            <p style="text-align: center; margin-bottom: 15px; font-style: italic;">To assist in our needs</p>
+            <div class="honor-attendants">
+                <div class="honor-attendant">
+                    <h4>Best Man</h4>
+                    <p>MARK ANTHONY PITAO</p>
                 </div>
                 
-                <div class="party-category">
-                    <h3>Secondary Sponsors</h3>
-                    <p style="text-align: center; margin-bottom: 15px; font-style: italic;">To assist in our needs</p>
-                    <ul class="party-list">
-                        <li><strong>Best Man:</strong> MARK ANTHONY PITAO</li>
-                        <li><strong>Maid of Honor:</strong> TRINA CHARLENE ROBERTO</li>
-                        <li><strong>To bind us together:</strong> JEREMY GUANSENG & GRACELYN PERONA</li>
-                        <li><strong>To carry our symbol of Faith:</strong> RAI MADRIGAL</li>
-                        <li><strong>To carry our symbol of Love:</strong> DAVID ZIAN C. PITAO</li>
-                        <li><strong>To carry our symbol of Treasure:</strong> JIRO REINT F. BISANDE</li>
-                        <li><strong>To shower our aisle with flowers:</strong> REYN BASA & AYAKA MARI IRINCO</li>
-                    </ul>
+                <div class="honor-attendant">
+                    <h4>Maid of Honor</h4>
+                    <p>TRINA CHARLENE ROBERTO</p>
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="party-container">
+            <div class="party-category">
+                <h3>Principal Sponsors</h3>
+                <p style="text-align: center; margin-bottom: 15px; font-style: italic;">To stand as witnesses on our vows</p>
+                <ul class="party-list">
+                    <li class="principal-sponsor-pair">
+                        <span class="sponsor-name">REV. MARLON B. DIAZ</span>
+                        <span class="sponsor-name">DSS. ELIZABETH C. DIAZ</span>
+                    </li>
+                    <li class="principal-sponsor-pair">
+                        <span class="sponsor-name">MR. LOUIE GONZALES</span>
+                        <span class="sponsor-name">MRS. JULIE GONZALES</span>
+                    </li>
+                    <li class="principal-sponsor-pair">
+                        <span class="sponsor-name">MR. FLORO C. LAGARTO</span>
+                        <span class="sponsor-name">MRS. AILEEN A. LAGARTO</span>
+                    </li>
+                    <li class="principal-sponsor-pair">
+                        <span class="sponsor-name">MR. FREDERICK CASTILLO</span>
+                        <span class="sponsor-name">MS. ANGELINA JUTIE</span>
+                    </li>
+                    <li class="principal-sponsor-pair">
+                        <span class="sponsor-name">MR. JEFFREY ENCARNADO</span>
+                        <span class="sponsor-name">DR. CHERRIE LYN L. CASCO</span>
+                    </li>
+                    <li class="principal-sponsor-pair">
+                        <span class="sponsor-name">MR. NANIE CARUNGCONG</span>
+                        <span class="sponsor-name">MRS. MARCI BOLLES</span>
+                    </li>
+                    <li class="principal-sponsor-pair">
+                        <span class="sponsor-name">MR. FREDERICK DINGLASAN</span>
+                        <span class="sponsor-name">MRS. MYRLANIE DINGLASAN</span>
+                    </li>
+                    <li class="principal-sponsor-pair">
+                        <span class="sponsor-name">MRS. MELANIE LARUE</span>
+                    </li>
+                    <li class="principal-sponsor-pair">
+                        <span class="sponsor-name">MS. LAARNI DE LEON REYES</span>
+                    </li>
+                </ul>
+            </div>
+            
+             
+
+            <div class="party-category">
+                <h3>Secondary Sponsors</h3>
+                <ul class="party-list">
+                    
+                    <li class="secondary-sponsor-item">
+                        <div class="role-title">To light our path</div>
+                        <div class="sponsor-name-individual">RADULF DOLORES</div>
+                        <div class="sponsor-name-individual">HEERAN IRINCO</div>
+                    </li>
+                   
+                    <li class="secondary-sponsor-item">
+                        <div class="role-title">To clothe us one</div>
+                        <div class="sponsor-name-individual">MARLONE MANICDAO</div>
+                        <div class="sponsor-name-individual">ARLETTE MARI BASA</div>
+                    </li>
+                    <li class="secondary-sponsor-item">
+                        <div class="role-title">To bind us together</div>
+                        <div class="sponsor-name-individual">JEREMY GUANSENG</div>
+                        <div class="sponsor-name-individual">GRACELYN PERONA</div>
+                    </li>
+                    <li class="secondary-sponsor-item">
+                        <div class="role-title">To carry our symbol of Faith</div>
+                        <div class="sponsor-name-individual">RAI MADRIGAL</div>
+                    </li>
+                    <li class="secondary-sponsor-item">
+                        <div class="role-title">To carry our symbol of Love</div>
+                        <div class="sponsor-name-individual">DAVID ZIAN C. PITAO</div>
+                    </li>
+                    <li class="secondary-sponsor-item">
+                        <div class="role-title">To carry our symbol of Treasure</div>
+                        <div class="sponsor-name-individual">JIRO REINT F. BISANDE</div>
+                    </li>
+                    <li class="secondary-sponsor-item">
+                        <div class="role-title">To shower our aisle with flowers</div>
+                        <div class="sponsor-name-individual">REYN BASA</div>
+                        <div class="sponsor-name-individual">AYAKA MARI IRINCO</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
     
     <!-- Guest Attire -->
     <section class="guest-attire">
         <div class="container">
-            <h2 class="section-title">Guest Attire</h2>
+            <h2 class="section-title attire-guide-title">Attire Guide</h2>
             <div class="attire-container">
                 <div class="attire-image-section">
                     <h3>Principal Sponsor Attire</h3>
@@ -846,7 +1008,7 @@ header {
     <!-- RSVP Form -->
     <section class="rsvp">
         <div class="container">
-            <h2 class="section-title">R.S.V.P</h2>
+            <h2 class="section-title rsvp-title">R.S.V.P</h2>
             <div class="rsvp-form">
                 <p style="margin-bottom: 20px; text-align: center;">We have reserved ____ seat/s for you.</p>
                 <p style="margin-bottom: 30px; text-align: center; font-style: italic;">The favor of your response is requested on or before Oct 15, 2025.</p>
@@ -854,7 +1016,7 @@ header {
                 <!-- Web3Forms RSVP Form -->
                 <form id="wedding-rsvp" action="https://api.web3forms.com/submit" method="POST">
                     <!-- Replace with your Web3Forms Access Key -->
-                    <input type="hidden" name="access_key" value="aca319da-7ae1-4177-a2e8-6d864e5cb3f0">
+                    <input type="hidden" name="access_key" value="137fee6d-e38a-43fe-ae80-0a58b69ce1b2">
                     <input type="hidden" name="subject" value="New Wedding RSVP Submission - Edmon & Mirah">
                     <input type="hidden" name="from_name" value="Edmon & Mirah Wedding RSVP">
                     <input type="checkbox" name="botcheck" style="display: none;">
@@ -926,7 +1088,7 @@ header {
     <!-- Gift Guide -->
     <section class="gift-guide">
         <div class="container">
-            <h2 class="section-title">Gift Guide</h2>
+            <h2 class="section-title gift-guide-title">Gift Guide</h2>
             <div class="gift-content">
                 <p>With all that we have, we've been truly blessed, your presence and prayers are all that we request. But if you desire to give nonetheless, monetary gift is one we suggest.</p>
                 
@@ -1088,5 +1250,3 @@ header {
     </script>
 </body>
 </html>
-
-
