@@ -1135,84 +1135,72 @@
     </section>
     
     <!-- RSVP Form -->
-    <section class="rsvp">
-        <div class="container">
-            <h2 class="section-title rsvp-title">R.S.V.P</h2>
-            <div class="rsvp-form">
-                <p style="margin-bottom: 20px; text-align: center;">We have reserved ____ seat/s for you.</p>
-                <p style="margin-bottom: 30px; text-align: center; font-style: italic;">The favor of your response is requested on or before Oct 20, 2025.</p>
+<section class="rsvp">
+    <div class="container">
+        <h2 class="section-title rsvp-title">R.S.V.P</h2>
+        <div class="rsvp-form">
+            <p style="margin-bottom: 30px; text-align: center;">We have reserved <strong>2</strong> seat/s for you.</p>
+            <p style="margin-bottom: 30px; text-align: center; font-style: italic;">The favor of your response is requested on or before Oct 20, 2025.</p>
+            
+            <!-- Web3Forms RSVP Form -->
+            <form id="wedding-rsvp" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Replace with your Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="aca319da-7ae1-4177-a2e8-6d864e5cb3f0">
+                <input type="hidden" name="subject" value="New Wedding RSVP Submission - Edmon & Mirah">
+                <input type="hidden" name="from_name" value="Edmon & Mirah Wedding RSVP">
+                <input type="checkbox" name="botcheck" style="display: none;">
                 
-                <!-- Web3Forms RSVP Form -->
-                <form id="wedding-rsvp" action="https://api.web3forms.com/submit" method="POST">
-                    <!-- Replace with your Web3Forms Access Key -->
-                    <input type="hidden" name="access_key" value="aca319da-7ae1-4177-a2e8-6d864e5cb3f0">
-                    <input type="hidden" name="subject" value="New Wedding RSVP Submission - Edmon & Mirah">
-                    <input type="hidden" name="from_name" value="Edmon & Mirah Wedding RSVP">
-                    <input type="checkbox" name="botcheck" style="display: none;">
-                    
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address (Optional)</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number (Optional)</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="guests">Number of Guests Attending *</label>
-                        <select id="guests" name="guests" required>
-                            <option value="">Select number of guests</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5+</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Will you be attending? *</label>
-                        <div class="attendance-options">
-                            <div class="attendance-option">
-                                <input type="radio" id="yes" name="attendance" value="Yes, I'll be there" required>
-                                <label for="yes">Yes, I'll be there</label>
-                            </div>
-                            <div class="attendance-option">
-                                <input type="radio" id="no" name="attendance" value="Sorry, can't make it">
-                                <label for="no">Sorry, can't make it</label>
-                            </div>
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address (Optional)</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label>Will you be attending? *</label>
+                    <div class="attendance-options">
+                        <div class="attendance-option">
+                            <input type="radio" id="yes" name="attendance" value="Yes, I'll be there" required>
+                            <label for="yes">Yes, I'll be there</label>
+                        </div>
+                        <div class="attendance-option">
+                            <input type="radio" id="no" name="attendance" value="Sorry, can't make it">
+                            <label for="no">Sorry, can't make it</label>
                         </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="dietary">Dietary Restrictions or Allergies</label>
-                        <input type="text" id="dietary" name="dietary" placeholder="e.g., Vegetarian, Nut Allergy, etc.">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message for the Couple (Optional)</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Share your well wishes or any special requests..."></textarea>
-                    </div>
-                    
-                    <button type="submit" id="submit-btn">Submit RSVP</button>
-                    
-                    <div id="result" class="form-message"></div>
-                </form>
+                </div>
                 
-                <p style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
-                    Kindly message us on this number <strong>09764679997</strong><br>
-                    You can also message us on Facebook to confirm your attendance.
-                </p>
-            </div>
+                <div class="form-group">
+                    <label for="dietary">Dietary Restrictions or Allergies</label>
+                    <input type="text" id="dietary" name="dietary" placeholder="e.g., Vegetarian, Nut Allergy, etc.">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message for the Couple (Optional)</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Share your well wishes or any special requests..."></textarea>
+                </div>
+                
+                <button type="submit" id="submit-btn">Submit RSVP</button>
+                
+                <div id="result" class="form-message"></div>
+            </form>
+            
+            <p style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
+                Kindly message us on this number <strong>09764679997</strong><br>
+                You can also message us on Facebook to confirm your attendance.
+            </p>
         </div>
-    </section>
+    </div>
+</section>
     
     <!-- Gift Guide -->
     <section class="gift-guide">
@@ -1523,4 +1511,3 @@
     </script>
 </body>
 </html>
-
